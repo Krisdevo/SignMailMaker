@@ -9,5 +9,5 @@ Vous pouvez copier le visuel complet de la signature en appuyant sur copier la s
 
 ## Installation 
 
-Pour installer le projet vous devez taper, dans git bash, ** git init + l'Url du projet.**
+Pour installer le projet vous devez taper, dans git bash, **git init + l'Url du projet.**
 Pour avoir un visuel, vous pouvez installer l'extension Live Server de Ritwick Dey, dans Visual Studio Code. 
