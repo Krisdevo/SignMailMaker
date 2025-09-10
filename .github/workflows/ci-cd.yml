@@ -41,9 +41,9 @@ jobs:
           script: |
             set -euo pipefail 
             echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u krisdevo --password-stdin
-            docker rm -f maracorp_web 2>/dev/null || true
-            docker compose -f /opt/maracorp/docker-compose.yml pull
-            docker compose -f /opt/maracorp/docker-compose.yml up -d --remove-orphans --force-recreate
+            docker rm -f signmail_web 2>/dev/null || true
+            docker compose -f /opt/signmail/docker-compose.yml pull
+            docker compose -f /opt/signmail/docker-compose.yml up -d --remove-orphans --force-recreate
             docker ps 
   
       
