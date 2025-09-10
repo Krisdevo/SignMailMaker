@@ -8,7 +8,7 @@ on:
 
 
 env:
-# tout garder en minuscule pour GHCR ( Git Hub Container Registry)
+# tout garder en minuscule pour GHCR ( Git Hu41b Container Registry)
   IMAGE_NAME: ghcr.io/krisdevo/signmailmaker:latest
 
 
