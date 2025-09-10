@@ -1,21 +1,10 @@
-version: "3.8"
-
 services:
-  app:
-    build:
-      context: .
-      dockerfile: Dockerfile
-    container_name: mon-app
+  web:
+    image: ghcr.io/krisdevo/signmailmaker:latest
+    container_name: signmail_web
+    restart: unless-stopped
     ports:
-      - "80:80"
-    restart: always
-    networks:
-      - app-network
-    volumes:
-      - static-data:/usr/share/nginx/html:ro
+      - "127.0.0.1:8080:80"
 
-networks:
-  app-network:
 
-volumes:
-  static-data:
+
