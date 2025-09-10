@@ -1,11 +1,14 @@
+# Étape de build
+FROM node:18 AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install --production
+COPY . .
+RUN npm run build
+
+# Étape de production (Nginx pour servir les fichiers statiques)
 FROM nginx:alpine
-
-#config nginx
-
+COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
-
-#copie TOUT le contenu de /site dans l'image 
-COPY site/ /usr/share/nginx/html/
-
-#vérification de santé (facultatif)
-HEALTHCHECK --interval=30s --timeout=3s --retries=3 CMD wget -qO- http://217.0.0.1/ >/dev/null 2>&1 || exit 1
+EXPOSE 80
+CMD ["nginx", "-g", "daemon off;"]
