@@ -37,7 +37,7 @@ jobs:
         with:
           host: ${{ secrets.SSH_HOST }} #193.70.33.48
           username: ${{ secrets.SSH_USER }} #root
-          key: ${{ secrets.SSH_KEY }} #clé privée OPENSSH  (BEGINù*ù/END).
+          key: ${{ secrets.SSH_KEY }} #clé privée OPgtrgENSSH  (BEGINù*ù/END).
           script: |
             set -euo pipefail 
             echo "${{ secrets.GHCR_PAT }}" | docker login ghcr.io -u krisdevo --password-stdin
