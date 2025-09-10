@@ -33,7 +33,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Deploy over SSH (root)
-        uses: appleboy/ssh-action@v.1.2.0
+        uses: appleboy/ssh-action@v1.2.0
         with:
           host: ${{ secrets.SSH_HOST }} #193.70.33.48
           username: ${{ secrets.SSH_USER }} #root
