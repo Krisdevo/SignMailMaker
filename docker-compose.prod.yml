@@ -1,7 +1,7 @@
 services:
   web:
     image: ghcr.io/krisdevo/signmailmaker:latest
-    container_name: maracorp_web
+    container_name: signmail
     restart: unless-stopped
     ports: 
       - "127.0.0.1:8080:80"
