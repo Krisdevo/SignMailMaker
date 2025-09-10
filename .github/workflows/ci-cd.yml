@@ -3,7 +3,7 @@ name: Build & Deploy
 on:
   push:
     branches: ["master"]
-  worklfow_dispatch: 
+  workflow_dispatch: 
 
 
 env: #Garde tout en minusucules pour ghcr
