@@ -6,7 +6,7 @@ RUN npm install --production
 COPY . .
 RUN npm run build
 
-# Étape de production (Nginx pour servir les fichiers statiques)
+# Étape de productioçooion (Nginx pour servir les fichiers statiques)
 FROM nginx:alpine
 COPY --from=builder /app/dist /usr/share/nginx/html
 COPY nginx.conf /etc/nginx/nginx.conf
